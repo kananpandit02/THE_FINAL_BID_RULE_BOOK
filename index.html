@@ -1,327 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE FINAL BID – Official Rule Book</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #020024, #090979, #00d4ff);
-      color: #f4f6fb;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE FINAL BID – Official Rule Book</title>
 
-    /* HERO SECTION */
-    header {
-      padding: 90px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #ff512f, #dd2476, #7f00ff);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.45);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3.4rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-    header h2 {
-      margin: 14px 0 0;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-    header p {
-      margin-top: 18px;
-      font-size: 1.35rem;
-      font-weight: 500;
-    }
-    .tagline {
-      margin-top: 26px;
-      display: inline-block;
-      padding: 12px 26px;
-      border-radius: 50px;
-      background: rgba(0,0,0,0.35);
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
-    /* CONTAINER */
-    .container {
-      max-width: 1250px;
-      margin: 70px auto;
-      padding: 0 20px;
-    }
-
-    /* CARD */
-    .card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.05));
-      backdrop-filter: blur(16px);
-      border-radius: 24px;
-      padding: 40px;
-      margin-bottom: 42px;
-      box-shadow: 0 35px 70px rgba(0,0,0,0.35);
-      border: 1px solid rgba(255,255,255,0.25);
-    }
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 18px;
-      font-size: 1.9rem;
-      color: #ffe082;
-      border-left: 6px solid #ffe082;
-      padding-left: 16px;
-    }
-    .card p {
-      line-height: 1.9;
-      font-size: 1.05rem;
-    }
-    ul {
-      padding-left: 22px;
-      line-height: 1.9;
-      font-size: 1.05rem;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-
-    .mini {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      border-radius: 20px;
-      padding: 26px;
-      box-shadow: 0 22px 45px rgba(0,0,0,0.35);
-      text-align: center;
-    }
-    .mini h3 {
-      margin: 0 0 8px;
-      font-size: 1.3rem;
-    }
-
-    /* BADGES */
-    .badge {
-      display: inline-block;
-      padding: 7px 16px;
-      border-radius: 22px;
-      background: #ffd369;
-      color: #000;
-      font-weight: 800;
-      margin: 6px 8px 10px 0;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      background: #000;
-      padding: 44px 20px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #bbb;
-    }
-    footer strong { color: #fff; }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.5rem; }
-      header p { font-size: 1.15rem; }
-    }
-  </style>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+  color:#f4f6fb;
+}
+nav{
+  position:sticky;top:0;z-index:999;
+  background:rgba(0,0,0,.65);
+  padding:14px 20px;display:flex;justify-content:space-between
+}
+nav a{color:#ffd369;text-decoration:none;margin-left:18px}
+header{
+  padding:80px 20px;text-align:center;
+  background:linear-gradient(135deg,#ff512f,#dd2476,#7f00ff);
+}
+header h1{font-size:3.2rem;font-weight:800}
+.card{
+  max-width:1250px;margin:50px auto;padding:40px;
+  background:rgba(255,255,255,.12);
+  border-radius:24px
+}
+.card h2{color:#ffe082;border-left:6px solid #ffe082;padding-left:14px}
+ul{line-height:1.9}
+.btn{background:#00c6ff;border:none;padding:12px 26px;border-radius:30px;font-weight:800}
+.btn-mini{background:#ffd369;border:none;padding:8px 16px;border-radius:20px;font-weight:800}
+.input{padding:10px 18px;border-radius:30px;border:none;width:240px}
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th,td{padding:10px}
+thead{background:#ffd369;color:#000}
+tbody tr{border-bottom:1px solid rgba(255,255,255,.25)}
+footer{background:#000;padding:40px;text-align:center}
+</style>
 </head>
+
 <body>
-<nav style="position:sticky;top:0;z-index:999;background:rgba(0,0,0,0.65);backdrop-filter:blur(12px);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
-  <div style="font-weight:800;letter-spacing:1px;">THE FINAL BID</div>
-  <div style="display:flex;gap:18px;font-size:0.95rem;">
-    <a href="#overview" style="color:#ffd369;text-decoration:none;">Overview</a>
-    <a href="#bidding" style="color:#ffd369;text-decoration:none;">Bidding</a>
-    <a href="#squad" style="color:#ffd369;text-decoration:none;">Squad</a>
-    <a href="#xi" style="color:#ffd369;text-decoration:none;">Playing XI</a>
-    <a href="#results" style="color:#ffd369;text-decoration:none;">Results</a>
+
+<nav>
+  <strong>THE FINAL BID</strong>
+  <div>
+    <a href="#overview">Overview</a>
+    <a href="#rules">Rules</a>
+    <a href="#playerpool">Player Pool</a>
+    <a href="#teamcart">Team Cart</a>
+
+    <!-- <div class="card" id="teamcart"> -->
+    <a href="#eventlead">Event Lead</a>
   </div>
 </nav>
 
-<header>
-  <div style="display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;margin-bottom:25px;">
-    <img src="perceptron_logo.png" alt="Perceptron 2026 Logo" style="height:80px;object-fit:contain;" />
-    <img src="rmv_university_logo.jpeg" alt="RMV University Logo" style="height:80px;object-fit:contain;" />
+
+<!-- 
+<nav>
+  <strong>THE FINAL BID</strong>
+  <div>
+    <a href="#overview">Overview</a>
+    <a href="#playerpool">Player Pool</a>
+    <a href="#rules">Rules</a>
   </div>
+</nav> -->
+
+<header>
+  <img src="perceptron_logo.png" height="70">
+  <img src="rmv_university_logo.png" height="70"><br><br>
   <h1>THE FINAL BID</h1>
-  <h2>Cricket Auction Event</h2>
-  <p>Official Rule Book</p>
-  <div class="tagline">Bid Like a Boss · Play Like a Pro · Win Like a Legend</div>
+  <p>Cricket Auction Event · Official Rule Book</p>
 </header>
 
-<div class="container" id="overview">
 
-  <div class="card">
-    <h2>Event Affiliation</h2>
-    <p>
-      Organized under <strong>PERCEPTRON 2026</strong>, the official technical fest of the
-      <strong>Department of Computer Science</strong>,<br />
-      <strong>Ramakrishna Mission Vivekananda University of Education and Research Institute</strong>.
-    </p>
-  </div>
 
-  <div class="card">
-    <h2>Event Overview</h2>
-    <div class="grid">
-      <div class="mini"><h3>Format</h3><p>Offline · Live On-Stage</p></div>
-      <div class="mini"><h3>Teams</h3><p>Top 8 Qualified Teams</p></div>
-      <div class="mini"><h3>Budget</h3><p>₹90 Crore per Team</p></div>
-      <div class="mini"><h3>Squad</h3><p>Exactly 15 Players</p></div>
-    </div>
-  </div>
+<!-- ================= OVERVIEW ================= -->
+<div class="card" id="overview">
+  <h2>Event Overview</h2>
+  <p>
+    <strong>THE FINAL BID</strong> is a strategic cricket auction simulation event
+    designed to evaluate participants on decision-making, analytical thinking,
+    budget management, risk handling, and intelligent squad-building.
+  </p>
+  <p>
+    Each team represents a professional cricket franchise and participates in a
+    live, offline auction to assemble a competitive squad from a fixed player pool.
+    The event closely follows real-world league auction rules and dynamics.
+  </p>
+</div>
 
+<!-- ================= RULES (WRAPPER FOR NAV) ================= -->
+<div id="rules">
+
+  <!-- PLAYER POOL RULES -->
   <div class="card">
-    <h2>Player Pool</h2>
-    <span class="badge">140 Players</span>
-    <span class="badge">100 Indian</span>
-    <span class="badge">40 Overseas</span>
-    <span class="badge">4 Roles</span>
+    <h2>Player Pool Rules</h2>
     <ul>
-      <li>Batsmen</li>
-      <li>Bowlers</li>
-      <li>All-rounders</li>
-      <li>Wicketkeepers</li>
+      <li>Total Players in Auction Pool: <strong>140</strong></li>
+      <li><strong>100 Indian</strong> players and <strong>40 Overseas</strong> players</li>
+      <li>Each player is assigned a fixed <strong>Base Price</strong> and <strong>Base Points</strong></li>
+      <li>Players are categorized into:
+        <ul>
+          <li>Batsman</li>
+          <li>Bowler</li>
+          <li>All-rounder</li>
+          <li>Wicketkeeper</li>
+        </ul>
+      </li>
+      <li>Player roles, prices, and points are final and non-negotiable</li>
+      <li>No new players will be added once the auction starts</li>
+      <li>Player data can be viewed only through the official auction system</li>
     </ul>
   </div>
 
-  <div class="card" id="bidding">
-    <h2>Bidding Rules</h2>
+  <!-- AUCTION RULES -->
+  <div class="card">
+    <h2>Auction & Bidding Rules</h2>
     <ul>
-      <li>5 seconds for the first bid, else player is UNSOLD</li>
-      <li>3 seconds for subsequent bids</li>
-      <li>Fixed bid increments as per rule book</li>
-      <li>Jump bids are allowed</li>
-      <li>No re-auctioning of players</li>
+      <li>Each team starts with a virtual purse of <strong>₹90 Crore</strong></li>
+      <li>The auction is conducted by an official auctioneer</li>
+      <li>One player is auctioned at a time</li>
+      <li>The auctioneer announces the player name, role, and base price</li>
+      <li>The <strong>first bid must be placed within 5 seconds</strong>, otherwise the player is declared <strong>UNSOLD</strong></li>
+      <li>After the first bid, each subsequent bid must be placed within <strong>3 seconds</strong></li>
+      <li>The countdown resets after every valid bid</li>
+      <li>Jump bidding is allowed as per auctioneer instructions</li>
+      <li>Once declared UNSOLD, the player will <strong>NOT</strong> be re-auctioned</li>
+      <li>A team cannot place a bid if:
+        <ul>
+          <li>Budget becomes insufficient</li>
+          <li>Squad composition rules are violated</li>
+        </ul>
+      </li>
+      <li>The auctioneer’s decision is <strong>final and binding</strong></li>
     </ul>
   </div>
 
-  <div class="card" id="squad">
-    <h2>Squad Composition (15 Players)</h2>
+  <!-- SQUAD RULES -->
+  <div class="card">
+    <h2>Squad Composition Rules</h2>
     <ul>
-      <li>Minimum 5 Batsmen</li>
-      <li>Minimum 4 Bowlers</li>
-      <li>Minimum 3 All-rounders</li>
-      <li>Minimum 2 Wicketkeepers</li>
-      <li>Maximum 7 Overseas Players</li>
+      <li>Each team must build a squad of <strong>exactly 15 players</strong></li>
+      <li>Minimum squad requirements:
+        <ul>
+          <li><strong>5 Batsmen</strong></li>
+          <li><strong>4 Bowlers</strong></li>
+          <li><strong>3 All-rounders</strong></li>
+          <li><strong>2 Wicketkeepers</strong></li>
+        </ul>
+      </li>
+      <li>Maximum <strong>7 Overseas players</strong> allowed in the squad</li>
+      <li>Teams must manage budget carefully to complete the squad</li>
+      <li>Failure to meet squad requirements results in <strong>DISQUALIFICATION</strong></li>
     </ul>
   </div>
 
-  <div class="card" id="xi">
+  <!-- PLAYING XI -->
+  <div class="card">
     <h2>Playing XI Rules</h2>
     <ul>
-      <li>Exactly 11 Players</li>
-      <li>At least 3 Batters</li>
-      <li>At least 3 Bowlers</li>
-      <li>At least 2 All-rounders</li>
-      <li>At least 1 Wicketkeeper</li>
-      <li>At most 4 Overseas Players</li>
+      <li>Each team must submit a <strong>Playing XI of exactly 11 players</strong></li>
+      <li>Playing XI must include:
+        <ul>
+          <li>Minimum <strong>3 Batsmen</strong></li>
+          <li>Minimum <strong>3 Bowlers</strong></li>
+          <li>Minimum <strong>2 All-rounders</strong></li>
+          <li>Minimum <strong>1 Wicketkeeper</strong></li>
+        </ul>
+      </li>
+      <li>Maximum <strong>4 Overseas players</strong> allowed in Playing XI</li>
+      <li>Any Playing XI violating the above rules will be declared <strong>INVALID</strong></li>
     </ul>
   </div>
 
-  <div class="card" id="results">
-    <h2>Results & Ranking</h2>
-    <ul>
-      <li>🏆 Winner – Highest Total Points</li>
-      <li>🥈 Runner-Up – Second Highest Points</li>
-      <li>🥉 Third Place – Third Highest Points</li>
-    </ul>
-  </div>
-
+  <!-- SCORING -->
   <div class="card">
-    <h2>Event Lead</h2>
+    <h2>Scoring & Tie-Breakers</h2>
     <ul>
-      <li><strong>Kanan Pandit</strong></li>
-      <li>📞 7384661310</li>
-      <li>✉️ kananpandit02@gmail.com</li>
+      <li>
+        Total team score is calculated as:
+        <strong>Sum of Base Points of the Playing XI</strong>
+      </li>
+      <li>The team with the highest total score is declared the <strong>WINNER</strong></li>
+      <li>In case of a tie, the following tie-breakers are applied in order:
+        <ol>
+          <li>Higher remaining budget after auction</li>
+          <li>Fewer overseas players in Playing XI</li>
+          <li>Faster completion of full squad</li>
+        </ol>
+      </li>
     </ul>
   </div>
 
 </div>
 
-<!-- PARTICIPANT PLAYER POOL VIEW (PRE-UPLOADED & READ-ONLY) -->
-<div class="container" id="playerpool">
-  <div class="card">
-    <h2>Participant Player Pool</h2>
-    <p>
-      This section allows participants to view the official player pool
-      directly from the uploaded Excel sheet. Only <b>permitted columns</b>
-      are displayed.
-    </p>
 
-    <p><b>Note:</b> The official player pool is <b>pre-uploaded by the organizers</b>. Participants can view it by clicking the button below. No uploads are allowed.</p>
 
-<button id="loadPool" style="background:#00c6ff;border:none;padding:14px 32px;border-radius:30px;font-weight:800;cursor:pointer;margin-top:14px;">👁️ View Player Pool</button>📂 View Player Pool</button>
 
-    <div style="overflow-x:auto;">
-      <table id="playerTable" style="width:100%;border-collapse:collapse;margin-top:20px;">
-        <thead>
-          <tr style="background:#ffd369;color:#000;">
-            <th style="padding:10px;">Player Name</th>
-            <th style="padding:10px;">Country</th>
-            <th style="padding:10px;">Role</th>
-            <th style="padding:10px;">Base Price</th>
-            <th style="padding:10px;">Base Points</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+
+
+<!-- TEAM CART -->
+<div class="card" id="teamcart">
+  <h2>Team Cart</h2>
+
+  <p>
+    The <strong>Team Cart</strong> is the official workspace for each team.
+    Teams can track their purchased players, remaining budget, squad composition,
+    and Playing XI details here.
+  </p>
+
+  <ul>
+    <li>View selected players during the auction</li>
+    <li>Monitor remaining budget in real time</li>
+    <li>Check squad composition validity</li>
+    <li>Finalize Playing XI after auction completion</li>
+  </ul>
+
+  <div style="margin-top:18px;">
+    <a href="https://auction-perceptron-window.vercel.app/team-view.html" target="_blank"
+       style="
+         display:inline-block;
+         background:#00c6ff;
+         color:#000;
+         padding:14px 30px;
+         border-radius:30px;
+         font-weight:800;
+         text-decoration:none;
+       ">
+       🛒 Open Team Cart
+    </a>
+  </div>
+
+  <p style="margin-top:14px;font-size:0.9rem;opacity:0.85;">
+    ⚠️ Access restricted to registered teams only.
+  </p>
+</div>
+
+
+
+
+
+
+
+
+<!-- EVENT LEAD DETAILS -->
+<div class="card" id="eventlead">
+  <h2>Event Lead & Coordination</h2>
+
+  <p>
+    The smooth execution, fairness, and integrity of <strong>THE FINAL BID</strong>
+    are ensured by the official Event Lead and Coordinators appointed by the
+    organizing committee.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Event Lead:</strong><br>
+      Responsible for overall event management, rule enforcement, and final decisions.
+    </li>
+
+    <li>
+      <strong>Auctioneer:</strong><br>
+      Conducts the live auction, manages bidding flow, time limits, and declares
+      SOLD / UNSOLD status.
+    </li>
+
+    <li>
+      <strong>Technical Coordinator:</strong><br>
+      Manages the official player pool system, scoring logic, and data accuracy.
+    </li>
+
+    <li>
+      <strong>Judging Panel:</strong><br>
+      Verifies squad validity, Playing XI compliance, scoring, and tie-breakers.
+    </li>
+
+    <li>
+      <strong>Authority Clause:</strong><br>
+      Decisions taken by the Event Lead, Auctioneer, and Judges are
+      <strong>final and binding</strong>. No disputes will be entertained once a
+      decision is announced.
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+<!-- PLAYER POOL -->
+<div class="card" id="playerpool">
+  <h2>Participant Player Pool</h2>
+
+  <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+    <button id="togglePool" class="btn">👁️ View Player Pool</button>
+    <input id="search" class="input" placeholder="Search Player">
+
+    <!-- ROLE FILTER -->
+    <button onclick="filterRole('BATSMAN')" class="btn-mini">🏏 Batsmen</button>
+    <button onclick="filterRole('BOWLER')" class="btn-mini">🎯 Bowlers</button>
+    <button onclick="filterRole('ALL-ROUNDER')" class="btn-mini">⚡ All-rounders</button>
+    <button onclick="filterRole('WICKET KEEPER')" class="btn-mini">🧤 Wicketkeepers</button>
+    <button onclick="resetFilter()" class="btn-mini">🔄 Reset</button>
+  </div>
+
+  <div id="stats" style="margin-top:12px;font-weight:700"></div>
+
+  <div id="tableWrap" style="display:none;margin-top:15px;">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Country</th>
+          <th>Base Price(Lakhs)</th>
+          <th>Base Points</th>
+          <th>Captain Bonus </th>
+          <th>WK Bonus</th>
+          <th>Star Player Bonus </th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
   </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
 <script>
-  // CHANGE THIS PATH TO YOUR PRE-UPLOADED EXCEL FILE
-  // PRE-UPLOADED EXCEL FILE (DO NOT CHANGE UI)
-  // File name must be exactly as below
-  const PLAYER_POOL_XL_URL = "AUCTION.xlsx"; // same folder as this HTML
+const FILE = "AUCTION.xlsx";
+let data = [], view = [];
 
-  document.getElementById('loadPool').addEventListener('click', async function () {
-    try {
-      const response = await fetch(PLAYER_POOL_XL_URL);
-      if (!response.ok) throw new Error('Unable to load player pool file');
+const tbody = document.getElementById("tbody");
+const stats = document.getElementById("stats");
+const tableWrap = document.getElementById("tableWrap");
 
-      const arrayBuffer = await response.arrayBuffer();
-      const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-      const sheet = workbook.Sheets[workbook.SheetNames[0]];
-      const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+document.getElementById("togglePool").onclick = async () => {
+  if (!data.length) await load();
+  tableWrap.style.display =
+    tableWrap.style.display === "none" ? "block" : "none";
+};
 
-      const tbody = document.querySelector('#playerTable tbody');
-      tbody.innerHTML = '';
+async function load() {
+  const res = await fetch(FILE);
+  if (!res.ok) return alert("❌ AUCTION.xlsx not found");
 
-      for (let i = 1; i < rows.length; i++) {
-        const row = rows[i];
-        if (!row || row.length === 0) continue;
+  const wb = XLSX.read(await res.arrayBuffer(), { type: "array" });
+  const rows = XLSX.utils.sheet_to_json(
+    wb.Sheets[wb.SheetNames[0]],
+    { header: 1 }
+  );
 
-        const tr = document.createElement('tr');
-        tr.style.borderBottom = '1px solid rgba(255,255,255,0.2)';
+  for (let i = 1; i < rows.length; i++) {
+    const r = rows[i];
+    if (!r) continue;
 
-        for (let j = 0; j < 5; j++) {
-          const td = document.createElement('td');
-          td.style.padding = '10px';
-          td.textContent = row[j] ?? '';
-          tr.appendChild(td);
-        }
-        tbody.appendChild(tr);
-      }
-    } catch (err) {
-      alert('Player pool could not be loaded. Please contact the organizers.');
-      console.error(err);
-    }
+    data.push({
+      name: r[0],
+      role: String(r[1]).toUpperCase(),
+      country: String(r[2]).toUpperCase(),
+      price: +r[3] || 0,
+      base: +r[4] || 0,
+      cap: +r[5] || 0,
+      wk: +r[6] || 0,
+      star: +r[7] || 0
+    });
+  }
+  view = [...data];
+  render(view);
+}
+
+function render(arr) {
+  tbody.innerHTML = "";
+  arr.forEach(p => {
+    tbody.innerHTML += `
+      <tr>
+        <td>${p.name}</td>
+        <td>${p.role}</td>
+        <td>${p.country}</td>
+        <td>${p.price}</td>
+        <td>${p.base}</td>
+        <td>${p.cap}</td>
+        <td>${p.wk}</td>
+        <td>${p.star}</td>
+      </tr>`;
   });
+
+  stats.innerText = `Total Players: ${arr.length}`;
+}
+
+/* 🔍 SEARCH */
+document.getElementById("search").oninput = e => {
+  const q = e.target.value.toLowerCase();
+  render(
+    data.filter(p => p.name.toLowerCase().includes(q))
+  );
+};
+
+/* 📊 ROLE FILTER */
+function filterRole(role) {
+  view = data.filter(p => p.role === role);
+  render(view);
+}
+
+/* 🔄 RESET */
+function resetFilter() {
+  view = [...data];
+  render(view);
+}
 </script>
-
-<footer>
-  <strong>PERCEPTRON 2026</strong> · Department of Computer Science · RMV University<br />
-  © THE FINAL BID – Official Rule Book
-<div style="text-align:center;margin:40px 0;">
-  <button onclick="window.print()" style="background:#ffd369;border:none;padding:14px 30px;border-radius:30px;font-weight:800;cursor:pointer;">⬇ Download Rule Book (PDF)</button>
-</div>
-
-<footer>
 
 </body>
 </html>
-
