@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE FINAL BID – Official Rule Book</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" sizes="32x32" href="icon-32.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#090979">
+
   <style>
     * { box-sizing: border-box; }
     body {
@@ -13,137 +21,73 @@
       background: linear-gradient(135deg, #020024, #090979, #00d4ff);
       color: #f4f6fb;
     }
-
-    /* HERO SECTION */
     header {
       padding: 90px 20px;
       text-align: center;
       background: linear-gradient(135deg, #ff512f, #dd2476, #7f00ff);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.45);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3.4rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-    header h2 {
-      margin: 14px 0 0;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-    header p {
-      margin-top: 18px;
-      font-size: 1.35rem;
-      font-weight: 500;
     }
     .tagline {
       margin-top: 26px;
-      display: inline-block;
       padding: 12px 26px;
       border-radius: 50px;
       background: rgba(0,0,0,0.35);
+      display: inline-block;
       font-weight: 700;
-      letter-spacing: 1px;
     }
-
-    /* CONTAINER */
     .container {
       max-width: 1250px;
       margin: 70px auto;
       padding: 0 20px;
     }
-
-    /* CARD */
     .card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.05));
-      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,.12);
       border-radius: 24px;
       padding: 40px;
       margin-bottom: 42px;
-      box-shadow: 0 35px 70px rgba(0,0,0,0.35);
-      border: 1px solid rgba(255,255,255,0.25);
     }
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 18px;
-      font-size: 1.9rem;
+    h2 {
       color: #ffe082;
       border-left: 6px solid #ffe082;
       padding-left: 16px;
     }
-    .card p {
-      line-height: 1.9;
-      font-size: 1.05rem;
-    }
-    ul {
-      padding-left: 22px;
-      line-height: 1.9;
-      font-size: 1.05rem;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-
-    .mini {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      border-radius: 20px;
-      padding: 26px;
-      box-shadow: 0 22px 45px rgba(0,0,0,0.35);
-      text-align: center;
-    }
-    .mini h3 {
-      margin: 0 0 8px;
-      font-size: 1.3rem;
-    }
-
-    /* BADGES */
     .badge {
-      display: inline-block;
-      padding: 7px 16px;
-      border-radius: 22px;
       background: #ffd369;
       color: #000;
+      padding: 7px 16px;
+      border-radius: 20px;
       font-weight: 800;
-      margin: 6px 8px 10px 0;
-      font-size: 0.9rem;
+      margin-right: 8px;
     }
-
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td { padding: 10px; }
+    th { background: #ffd369; color: #000; }
     footer {
       background: #000;
-      padding: 44px 20px;
+      padding: 40px;
       text-align: center;
-      font-size: 0.95rem;
       color: #bbb;
-    }
-    footer strong { color: #fff; }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.5rem; }
-      header p { font-size: 1.15rem; }
     }
   </style>
 </head>
+
 <body>
-<nav style="position:sticky;top:0;z-index:999;background:rgba(0,0,0,0.65);backdrop-filter:blur(12px);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;">
-  <div style="font-weight:800;letter-spacing:1px;">THE FINAL BID</div>
-  <div style="display:flex;gap:18px;font-size:0.95rem;">
-    <a href="#overview" style="color:#ffd369;text-decoration:none;">Overview</a>
-    <a href="#bidding" style="color:#ffd369;text-decoration:none;">Bidding</a>
-    <a href="#squad" style="color:#ffd369;text-decoration:none;">Squad</a>
-    <a href="#xi" style="color:#ffd369;text-decoration:none;">Playing XI</a>
-    <a href="#results" style="color:#ffd369;text-decoration:none;">Results</a>
+
+<nav style="position:sticky;top:0;background:rgba(0,0,0,.65);padding:14px 20px;display:flex;justify-content:space-between">
+  <b>THE FINAL BID</b>
+  <div>
+    <a href="#overview" style="color:#ffd369;text-decoration:none;margin-left:14px">Overview</a>
+    <a href="#playerpool" style="color:#ffd369;text-decoration:none;margin-left:14px">Player Pool</a>
   </div>
 </nav>
 
 <header>
-  <div style="display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;margin-bottom:25px;">
-    <img src="perceptron_logo.png" alt="Perceptron 2026 Logo" style="height:80px;object-fit:contain;" />
-    <img src="rmv_university_logo.jpeg" alt="RMV University Logo" style="height:80px;object-fit:contain;" />
+  <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-bottom:25px">
+    <img src="perceptron_logo.png" height="80">
+    <img src="rmv_university_logo.jpeg" height="80">
   </div>
   <h1>THE FINAL BID</h1>
   <h2>Cricket Auction Event</h2>
@@ -152,176 +96,118 @@
 </header>
 
 <div class="container" id="overview">
-
   <div class="card">
     <h2>Event Affiliation</h2>
-    <p>
-      Organized under <strong>PERCEPTRON 2026</strong>, the official technical fest of the
-      <strong>Department of Computer Science</strong>,<br />
-      <strong>Ramakrishna Mission Vivekananda University of Education and Research Institute</strong>.
-    </p>
+    Organized under <b>PERCEPTRON 2026</b>, Department of Computer Science,<br>
+    Ramakrishna Mission Vivekananda University of Education & Research Institute.
   </div>
-
-  <div class="card">
-    <h2>Event Overview</h2>
-    <div class="grid">
-      <div class="mini"><h3>Format</h3><p>Offline · Live On-Stage</p></div>
-      <div class="mini"><h3>Teams</h3><p>Top 8 Qualified Teams</p></div>
-      <div class="mini"><h3>Budget</h3><p>₹90 Crore per Team</p></div>
-      <div class="mini"><h3>Squad</h3><p>Exactly 15 Players</p></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Player Pool</h2>
-    <span class="badge">140 Players</span>
-    <span class="badge">100 Indian</span>
-    <span class="badge">40 Overseas</span>
-    <span class="badge">4 Roles</span>
-    <ul>
-      <li>Batsmen</li>
-      <li>Bowlers</li>
-      <li>All-rounders</li>
-      <li>Wicketkeepers</li>
-    </ul>
-  </div>
-
-  <div class="card" id="bidding">
-    <h2>Bidding Rules</h2>
-    <ul>
-      <li>5 seconds for the first bid, else player is UNSOLD</li>
-      <li>3 seconds for subsequent bids</li>
-      <li>Fixed bid increments as per rule book</li>
-      <li>Jump bids are allowed</li>
-      <li>No re-auctioning of players</li>
-    </ul>
-  </div>
-
-  <div class="card" id="squad">
-    <h2>Squad Composition (15 Players)</h2>
-    <ul>
-      <li>Minimum 5 Batsmen</li>
-      <li>Minimum 4 Bowlers</li>
-      <li>Minimum 3 All-rounders</li>
-      <li>Minimum 2 Wicketkeepers</li>
-      <li>Maximum 7 Overseas Players</li>
-    </ul>
-  </div>
-
-  <div class="card" id="xi">
-    <h2>Playing XI Rules</h2>
-    <ul>
-      <li>Exactly 11 Players</li>
-      <li>At least 3 Batters</li>
-      <li>At least 3 Bowlers</li>
-      <li>At least 2 All-rounders</li>
-      <li>At least 1 Wicketkeeper</li>
-      <li>At most 4 Overseas Players</li>
-    </ul>
-  </div>
-
-  <div class="card" id="results">
-    <h2>Results & Ranking</h2>
-    <ul>
-      <li>🏆 Winner – Highest Total Points</li>
-      <li>🥈 Runner-Up – Second Highest Points</li>
-      <li>🥉 Third Place – Third Highest Points</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Event Lead</h2>
-    <ul>
-      <li><strong>Kanan Pandit</strong></li>
-      <li>📞 7384661310</li>
-      <li>✉️ kananpandit02@gmail.com</li>
-    </ul>
-  </div>
-
 </div>
 
-<!-- PARTICIPANT PLAYER POOL VIEW (PRE-UPLOADED & READ-ONLY) -->
+<!-- PLAYER POOL -->
 <div class="container" id="playerpool">
   <div class="card">
     <h2>Participant Player Pool</h2>
-    <p>
-      This section allows participants to view the official player pool
-      directly from the uploaded Excel sheet. Only <b>permitted columns</b>
-      are displayed.
-    </p>
 
-    <p><b>Note:</b> The official player pool is <b>pre-uploaded by the organizers</b>. Participants can view it by clicking the button below. No uploads are allowed.</p>
+    <!-- SEARCH (HIDDEN INITIALLY) -->
+    <input id="searchInput" placeholder="🔍 Search player / country / role"
+      style="display:none;margin-top:16px;width:100%;padding:12px 16px;
+      border-radius:22px;border:none;font-weight:600">
 
-<button id="loadPool" style="background:#00c6ff;border:none;padding:14px 32px;border-radius:30px;font-weight:800;cursor:pointer;margin-top:14px;">👁️ View Player Pool</button>📂 View Player Pool</button>
-
-    <div style="overflow-x:auto;">
-      <table id="playerTable" style="width:100%;border-collapse:collapse;margin-top:20px;">
-        <thead>
-          <tr style="background:#ffd369;color:#000;">
-            <th style="padding:10px;">Player Name</th>
-            <th style="padding:10px;">Country</th>
-            <th style="padding:10px;">Role</th>
-            <th style="padding:10px;">Base Price</th>
-            <th style="padding:10px;">Base Points</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+    <!-- TOTAL COUNT -->
+    <div style="margin-top:14px">
+      <span class="badge" id="totalCount" style="display:none;">Total: 0</span>
     </div>
+
+    <!-- TOGGLE BUTTON -->
+    <button id="togglePool"
+      style="margin-top:16px;background:#00c6ff;border:none;
+      padding:14px 32px;border-radius:30px;font-weight:800;cursor:pointer">
+      👁️ View Player Pool
+    </button>
+
+    <!-- TABLE -->
+    <table id="playerTable" style="display:none">
+      <thead>
+        <tr>
+          <th>Player Name</th>
+          <th>Country</th>
+          <th>Role</th>
+          <th>Base Price</th>
+          <th>Base Points</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   </div>
 </div>
 
+<footer>
+  <b>PERCEPTRON 2026</b> · Dept. of CS · RMV University<br>
+  © THE FINAL BID
+  <br><br>
+  <button onclick="window.print()"
+    style="background:#ffd369;border:none;padding:12px 26px;border-radius:30px;font-weight:800">
+    ⬇ Download PDF
+  </button>
+</footer>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
-  // CHANGE THIS PATH TO YOUR PRE-UPLOADED EXCEL FILE
-  // PRE-UPLOADED EXCEL FILE (DO NOT CHANGE UI)
-  // File name must be exactly as below
-  const PLAYER_POOL_XL_URL = "AUCTION.xlsx"; // same folder as this HTML
+const FILE = "AUCTION.xlsx";
+let rows = [];
+let visible = false;
 
-  document.getElementById('loadPool').addEventListener('click', async function () {
-    try {
-      const response = await fetch(PLAYER_POOL_XL_URL);
-      if (!response.ok) throw new Error('Unable to load player pool file');
+const table = document.getElementById("playerTable");
+const tbody = table.querySelector("tbody");
+const btn = document.getElementById("togglePool");
+const search = document.getElementById("searchInput");
+const total = document.getElementById("totalCount");
 
-      const arrayBuffer = await response.arrayBuffer();
-      const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-      const sheet = workbook.Sheets[workbook.SheetNames[0]];
-      const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-
-      const tbody = document.querySelector('#playerTable tbody');
-      tbody.innerHTML = '';
-
-      for (let i = 1; i < rows.length; i++) {
-        const row = rows[i];
-        if (!row || row.length === 0) continue;
-
-        const tr = document.createElement('tr');
-        tr.style.borderBottom = '1px solid rgba(255,255,255,0.2)';
-
-        for (let j = 0; j < 5; j++) {
-          const td = document.createElement('td');
-          td.style.padding = '10px';
-          td.textContent = row[j] ?? '';
-          tr.appendChild(td);
-        }
-        tbody.appendChild(tr);
-      }
-    } catch (err) {
-      alert('Player pool could not be loaded. Please contact the organizers.');
-      console.error(err);
+btn.onclick = async () => {
+  if (!visible) {
+    if (rows.length === 0) {
+      const r = await fetch(FILE);
+      const b = await r.arrayBuffer();
+      const wb = XLSX.read(b, { type: "array" });
+      rows = XLSX.utils.sheet_to_json(
+        wb.Sheets[wb.SheetNames[0]], { header: 1 }
+      ).slice(1);
     }
+    render(rows);
+    table.style.display = "table";
+    search.style.display = "block";
+    total.style.display = "inline-block";
+    btn.textContent = "🙈 Hide Player Pool";
+    visible = true;
+  } else {
+    table.style.display = "none";
+    search.style.display = "none";
+    total.style.display = "none";
+    btn.textContent = "👁️ View Player Pool";
+    visible = false;
+  }
+};
+
+function render(data) {
+  tbody.innerHTML = "";
+  data.forEach(r => {
+    if (!r) return;
+    const tr = document.createElement("tr");
+    r.slice(0,5).forEach(c => {
+      const td = document.createElement("td");
+      td.textContent = c ?? "";
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
   });
+  total.textContent = `Total: ${data.length}`;
+}
+
+search.oninput = e => {
+  const q = e.target.value.toLowerCase();
+  render(rows.filter(r => r.join(" ").toLowerCase().includes(q)));
+};
 </script>
-
-<footer>
-  <strong>PERCEPTRON 2026</strong> · Department of Computer Science · RMV University<br />
-  © THE FINAL BID – Official Rule Book
-<div style="text-align:center;margin:40px 0;">
-  <button onclick="window.print()" style="background:#ffd369;border:none;padding:14px 30px;border-radius:30px;font-weight:800;cursor:pointer;">⬇ Download Rule Book (PDF)</button>
-</div>
-
-<footer>
 
 </body>
 </html>
-
