@@ -1,86 +1,70 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE FINAL BID – Official Rule Book</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE FINAL BID – Official Rule Book</title>
 
-  <!-- Icons -->
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" sizes="32x32" href="icon-32.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#090979">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #020024, #090979, #00d4ff);
-      color: #f4f6fb;
-    }
-    header {
-      padding: 90px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #ff512f, #dd2476, #7f00ff);
-    }
-    .tagline {
-      margin-top: 26px;
-      padding: 12px 26px;
-      border-radius: 50px;
-      background: rgba(0,0,0,0.35);
-      display: inline-block;
-      font-weight: 700;
-    }
-    .container {
-      max-width: 1250px;
-      margin: 70px auto;
-      padding: 0 20px;
-    }
-    .card {
-      background: rgba(255,255,255,.12);
-      border-radius: 24px;
-      padding: 40px;
-      margin-bottom: 42px;
-    }
-    h2 {
-      color: #ffe082;
-      border-left: 6px solid #ffe082;
-      padding-left: 16px;
-    }
-    .badge {
-      background: #ffd369;
-      color: #000;
-      padding: 7px 16px;
-      border-radius: 20px;
-      font-weight: 800;
-      margin-right: 8px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    th, td { padding: 10px; }
-    th { background: #ffd369; color: #000; }
-    footer {
-      background: #000;
-      padding: 40px;
-      text-align: center;
-      color: #bbb;
-    }
-  </style>
+<!-- Icons -->
+<link rel="icon" href="favicon.ico">
+<link rel="icon" sizes="32x32" href="icon-32.png">
+<link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#090979">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Poppins,sans-serif;
+  background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+  color:#f4f6fb
+}
+nav{
+  position:sticky;top:0;z-index:999;
+  background:rgba(0,0,0,.65);backdrop-filter:blur(12px);
+  padding:14px 20px;display:flex;justify-content:space-between
+}
+nav a{color:#ffd369;text-decoration:none;font-weight:600;margin-left:14px}
+header{
+  padding:90px 20px;text-align:center;
+  background:linear-gradient(135deg,#ff512f,#dd2476,#7f00ff)
+}
+header h1{font-size:3.4rem;margin:0;font-weight:800}
+header h2{margin-top:14px}
+.tagline{
+  margin-top:26px;padding:12px 26px;border-radius:50px;
+  background:rgba(0,0,0,.35);display:inline-block;font-weight:700
+}
+.container{max-width:1250px;margin:70px auto;padding:0 20px}
+.card{
+  background:rgba(255,255,255,.12);
+  border-radius:24px;padding:40px;margin-bottom:42px
+}
+h2{color:#ffe082;border-left:6px solid #ffe082;padding-left:16px}
+.badge{
+  background:#ffd369;color:#000;padding:7px 16px;
+  border-radius:20px;font-weight:800;margin-right:8px
+}
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th,td{padding:10px}
+th{background:#ffd369;color:#000}
+footer{background:#000;padding:40px;text-align:center;color:#bbb}
+</style>
 </head>
 
 <body>
 
-<nav style="position:sticky;top:0;background:rgba(0,0,0,.65);padding:14px 20px;display:flex;justify-content:space-between">
+<nav>
   <b>THE FINAL BID</b>
   <div>
-    <a href="#overview" style="color:#ffd369;text-decoration:none;margin-left:14px">Overview</a>
-    <a href="#playerpool" style="color:#ffd369;text-decoration:none;margin-left:14px">Player Pool</a>
+    <a href="#overview">Overview</a>
+    <a href="#bidding">Bidding</a>
+    <a href="#squad">Squad</a>
+    <a href="#xi">Playing XI</a>
+    <a href="#playerpool">Player Pool</a>
   </div>
 </nav>
 
@@ -101,6 +85,33 @@
     Organized under <b>PERCEPTRON 2026</b>, Department of Computer Science,<br>
     Ramakrishna Mission Vivekananda University of Education & Research Institute.
   </div>
+
+  <div class="card" id="bidding">
+    <h2>Bidding Rules</h2>
+    <ul>
+      <li>5 seconds for first bid</li>
+      <li>3 seconds for subsequent bids</li>
+      <li>Fixed bid increments</li>
+      <li>No re-auctioning</li>
+    </ul>
+  </div>
+
+  <div class="card" id="squad">
+    <h2>Squad Composition</h2>
+    <ul>
+      <li>15 Players</li>
+      <li>Max 7 Overseas</li>
+      <li>5 Bat · 4 Bowl · 3 AR · 2 WK</li>
+    </ul>
+  </div>
+
+  <div class="card" id="xi">
+    <h2>Playing XI Rules</h2>
+    <ul>
+      <li>Exactly 11 Players</li>
+      <li>At most 4 Overseas</li>
+    </ul>
+  </div>
 </div>
 
 <!-- PLAYER POOL -->
@@ -108,32 +119,32 @@
   <div class="card">
     <h2>Participant Player Pool</h2>
 
-    <!-- SEARCH (HIDDEN INITIALLY) -->
-    <input id="searchInput" placeholder="🔍 Search player / country / role"
-      style="display:none;margin-top:16px;width:100%;padding:12px 16px;
-      border-radius:22px;border:none;font-weight:600">
+    <input id="searchInput" placeholder="🔍 Search player / role / country"
+      style="padding:12px 16px;border-radius:20px;border:none;width:100%;font-weight:600">
 
-    <!-- TOTAL COUNT -->
-    <div style="margin-top:14px">
-      <span class="badge" id="totalCount" style="display:none;">Total: 0</span>
-    </div>
-
-    <!-- TOGGLE BUTTON -->
     <button id="togglePool"
-      style="margin-top:16px;background:#00c6ff;border:none;
-      padding:14px 32px;border-radius:30px;font-weight:800;cursor:pointer">
+      style="margin-top:14px;background:#00c6ff;border:none;padding:14px 32px;
+      border-radius:30px;font-weight:800;cursor:pointer">
       👁️ View Player Pool
     </button>
 
-    <!-- TABLE -->
+    <div style="margin-top:16px">
+      <span class="badge" id="cTotal">Total: 0</span>
+      <span class="badge" id="cBat">Bat: 0</span>
+      <span class="badge" id="cBowl">Bowl: 0</span>
+      <span class="badge" id="cAR">AR: 0</span>
+      <span class="badge" id="cWK">WK: 0</span>
+      <span class="badge" id="cOS">Overseas: 0</span>
+    </div>
+
     <table id="playerTable" style="display:none">
       <thead>
         <tr>
-          <th>Player Name</th>
+          <th>Player</th>
           <th>Country</th>
           <th>Role</th>
           <th>Base Price</th>
-          <th>Base Points</th>
+          <th>Points</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -153,61 +164,61 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
-const FILE = "AUCTION.xlsx";
-let rows = [];
-let visible = false;
+const FILE="AUCTION.xlsx";
+let rows=[],visible=false;
 
-const table = document.getElementById("playerTable");
-const tbody = table.querySelector("tbody");
-const btn = document.getElementById("togglePool");
-const search = document.getElementById("searchInput");
-const total = document.getElementById("totalCount");
-
-btn.onclick = async () => {
-  if (!visible) {
-    if (rows.length === 0) {
-      const r = await fetch(FILE);
-      const b = await r.arrayBuffer();
-      const wb = XLSX.read(b, { type: "array" });
-      rows = XLSX.utils.sheet_to_json(
-        wb.Sheets[wb.SheetNames[0]], { header: 1 }
-      ).slice(1);
+document.getElementById("togglePool").onclick=async()=>{
+  const table=document.getElementById("playerTable");
+  if(!visible){
+    if(rows.length===0){
+      const r=await fetch(FILE);const b=await r.arrayBuffer();
+      const wb=XLSX.read(b,{type:"array"});
+      rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1}).slice(1);
     }
     render(rows);
-    table.style.display = "table";
-    search.style.display = "block";
-    total.style.display = "inline-block";
-    btn.textContent = "🙈 Hide Player Pool";
-    visible = true;
-  } else {
-    table.style.display = "none";
-    search.style.display = "none";
-    total.style.display = "none";
-    btn.textContent = "👁️ View Player Pool";
-    visible = false;
+    table.style.display="table";
+    togglePool.textContent="🙈 Hide Player Pool";
+    visible=true;
+  }else{
+    table.style.display="none";
+    togglePool.textContent="👁️ View Player Pool";
+    visible=false;
   }
 };
 
-function render(data) {
-  tbody.innerHTML = "";
-  data.forEach(r => {
-    if (!r) return;
-    const tr = document.createElement("tr");
-    r.slice(0,5).forEach(c => {
-      const td = document.createElement("td");
-      td.textContent = c ?? "";
+function render(data){
+  let bat=0,bowl=0,ar=0,wk=0,os=0;
+  const tb=document.querySelector("#playerTable tbody");
+  tb.innerHTML="";
+  data.forEach(r=>{
+    const tr=document.createElement("tr");
+    r.slice(0,5).forEach(c=>{
+      const td=document.createElement("td");
+      td.textContent=c||"";
       tr.appendChild(td);
     });
-    tbody.appendChild(tr);
+    tb.appendChild(tr);
+    const role=(r[2]||"").toLowerCase();
+    const country=(r[1]||"").toLowerCase();
+    if(role.includes("bat"))bat++;
+    else if(role.includes("bowl"))bowl++;
+    else if(role.includes("all"))ar++;
+    else if(role.includes("wicket"))wk++;
+    if(country!=="india")os++;
   });
-  total.textContent = `Total: ${data.length}`;
+  cTotal.textContent=`Total: ${data.length}`;
+  cBat.textContent=`Bat: ${bat}`;
+  cBowl.textContent=`Bowl: ${bowl}`;
+  cAR.textContent=`AR: ${ar}`;
+  cWK.textContent=`WK: ${wk}`;
+  cOS.textContent=`Overseas: ${os}`;
 }
 
-search.oninput = e => {
-  const q = e.target.value.toLowerCase();
-  render(rows.filter(r => r.join(" ").toLowerCase().includes(q)));
+searchInput.oninput=e=>{
+  const q=e.target.value.toLowerCase();
+  render(rows.filter(r=>r.join(" ").toLowerCase().includes(q)));
 };
 </script>
 
 </body>
-</html>
+</html> -->
